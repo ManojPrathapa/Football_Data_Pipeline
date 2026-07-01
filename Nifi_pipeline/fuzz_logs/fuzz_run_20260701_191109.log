@@ -1,0 +1,49 @@
+[2026-07-01 19:11:09.620] [INFO] [FuzzLogger] === Fuzz run 20260701_191109 started ===
+[2026-07-01 19:11:09.789] [INFO] [SeedCorpusBuilder] Startup scan: United States of America - Major League Soccer.csv contributed 249 seeds
+[2026-07-01 19:11:09.801] [INFO] [SeedCorpusBuilder] Startup corpus built: 249 seeds from 1 file(s), event types={Miscontrol=15, Ball Recovery=15, Half Start=4, Carry=15, Dispossessed=15, Dribbled Past=15, Clearance=15, Offside=3, Pressure=15, Starting XI=2, Ball Receipt*=15, Dribble=15, Pass=15, Foul Won=15, Duel=15, Block=15, Interception=15, Foul Committed=15, Shot=15}
+[2026-07-01 19:11:11.210] [INFO] [ProcessorRegistry] Discovered 13 processors, 14 connections on live canvas
+[2026-07-01 19:11:11.225] [INFO] [ProcessorRegistry]   processor: PutDatabaseRecord (org.apache.nifi.processors.standard.PutDatabaseRecord) id=338d6dfd-959d-3137-2bd5-b441f1ca3fc7
+[2026-07-01 19:11:11.226] [INFO] [ProcessorRegistry]   processor: MergeContent (org.apache.nifi.processors.standard.MergeContent) id=32a307e2-d91d-3fe7-dd1b-242ba1f8d059
+[2026-07-01 19:11:11.226] [INFO] [ProcessorRegistry]   processor: GetFile (org.apache.nifi.processors.standard.GetFile) id=23c527f3-2357-35bb-bd7b-13f2c2547454
+[2026-07-01 19:11:11.226] [INFO] [ProcessorRegistry]   processor: ConvertRecord (org.apache.nifi.processors.standard.ConvertRecord) id=ba69e36f-7926-3b0f-0b8a-d2108d494093
+[2026-07-01 19:11:11.227] [INFO] [ProcessorRegistry]   processor: EvaluateJsonPath (org.apache.nifi.processors.standard.EvaluateJsonPath) id=5fd5311c-aad7-39ff-2162-75a6dd939b4a
+[2026-07-01 19:11:11.227] [INFO] [ProcessorRegistry]   processor: MergeContent (org.apache.nifi.processors.standard.MergeContent) id=1cf685d9-729f-3245-9fc9-f1a7d12a8864
+[2026-07-01 19:11:11.227] [INFO] [ProcessorRegistry]   processor: SplitJson (org.apache.nifi.processors.standard.SplitJson) id=1b7e83aa-7ad7-3592-d107-e29ab4bd35ac
+[2026-07-01 19:11:11.227] [INFO] [ProcessorRegistry]   processor: RouteOnAttribute (org.apache.nifi.processors.standard.RouteOnAttribute) id=bbf2a754-48f3-3c1f-30e8-5dc381df4775
+[2026-07-01 19:11:11.227] [INFO] [ProcessorRegistry]   processor: JoltTransformJSON (Pass) (org.apache.nifi.processors.jolt.JoltTransformJSON) id=201a696f-fe61-3d53-31ae-12c688cacc62
+[2026-07-01 19:11:11.228] [INFO] [ProcessorRegistry]   processor: MergeContent (org.apache.nifi.processors.standard.MergeContent) id=b9d6cf4b-67ac-3b49-d78c-e3fda06c9784
+[2026-07-01 19:11:11.228] [INFO] [ProcessorRegistry]   processor: UpdateAttribute (org.apache.nifi.processors.attributes.UpdateAttribute) id=2ed46af5-d421-3047-e212-4a3b733dc204
+[2026-07-01 19:11:11.228] [INFO] [ProcessorRegistry]   processor: JoltTransformJSON (Shot) (org.apache.nifi.processors.jolt.JoltTransformJSON) id=3879230c-7087-3d46-71b2-748db72e1b6f
+[2026-07-01 19:11:11.228] [INFO] [ProcessorRegistry]   processor: JoltTransformJSON (Dribble) (org.apache.nifi.processors.jolt.JoltTransformJSON) id=c184aad5-ed83-3065-e7fc-295ac534ef63
+[2026-07-01 19:11:11.366] [INFO] [FuzzEngine] Initialized. Corpus size=249, processors=13, connections=14
+[2026-07-01 19:11:11.719] [INFO] [FuzzEngine] Fuzzing loop started (nonstop until stopfuzz/exit). Drop new CSVs into Source anytime - they'll be picked up live.
+[2026-07-01 19:11:11.758] [INFO] [SeedWatcher] Watching C:\Users\manoj\Desktop\Football_Data_Pipeline\Nifi_pipeline\Source for dropped-in CSVs (live, no restart needed)
+[2026-07-01 19:11:11.806] [INFO] [FuzzEngine] iter=1 seed=14(Pass) mutations=[M6_ENUM_INVALIDATION, M3_NULL_EMPTY, M3_NULL_EMPTY] file=fuzz_20260701_191109_1.csv corpusSize=249
+[2026-07-01 19:11:13.203] [INFO] [FuzzEngine] iter=2 seed=175(Dispossessed) mutations=[M6_ENUM_INVALIDATION] file=fuzz_20260701_191109_2.csv corpusSize=249
+[2026-07-01 19:11:14.590] [INFO] [FuzzEngine] iter=3 seed=24(Ball Receipt*) mutations=[M3_NULL_EMPTY, M1_TYPE_COERCION, M6_ENUM_INVALIDATION] file=fuzz_20260701_191109_3.csv corpusSize=249
+[2026-07-01 19:11:15.965] [INFO] [FuzzEngine] iter=4 seed=178(Dispossessed) mutations=[M5_INJECTION_PAYLOAD, M6_ENUM_INVALIDATION, M3_NULL_EMPTY] file=fuzz_20260701_191109_4.csv corpusSize=249
+[2026-07-01 19:11:17.333] [INFO] [FuzzEngine] iter=5 seed=181(Dispossessed) mutations=[M1_TYPE_COERCION] file=fuzz_20260701_191109_5.csv corpusSize=249
+[2026-07-01 19:11:18.749] [INFO] [FuzzEngine] iter=6 seed=132(Miscontrol) mutations=[M3_NULL_EMPTY, M2_BOUNDARY_VALUE, M1_TYPE_COERCION] file=fuzz_20260701_191109_6.csv corpusSize=249
+[2026-07-01 19:11:20.118] [INFO] [FuzzEngine] iter=7 seed=190(Duel) mutations=[M2_BOUNDARY_VALUE] file=fuzz_20260701_191109_7.csv corpusSize=249
+[2026-07-01 19:11:21.488] [INFO] [FuzzEngine] iter=8 seed=34(Ball Receipt*) mutations=[M4_STRUCTURAL_CORRUPTION, M3_NULL_EMPTY] file=fuzz_20260701_191109_8.csv corpusSize=249
+[2026-07-01 19:11:22.829] [INFO] [FuzzEngine] iter=9 seed=245(Shot) mutations=[M3_NULL_EMPTY] file=fuzz_20260701_191109_9.csv corpusSize=249
+[2026-07-01 19:11:24.206] [INFO] [FuzzEngine] iter=10 seed=14(Pass) mutations=[M6_ENUM_INVALIDATION] file=fuzz_20260701_191109_10.csv corpusSize=249
+[2026-07-01 19:11:25.560] [INFO] [FuzzEngine] iter=11 seed=206(Dribbled Past) mutations=[M1_TYPE_COERCION, M2_BOUNDARY_VALUE, M3_NULL_EMPTY] file=fuzz_20260701_191109_11.csv corpusSize=249
+[2026-07-01 19:11:26.913] [INFO] [FuzzEngine] iter=12 seed=74(Ball Recovery) mutations=[M4_STRUCTURAL_CORRUPTION] file=fuzz_20260701_191109_12.csv corpusSize=249
+[2026-07-01 19:11:28.296] [INFO] [FuzzEngine] iter=13 seed=123(Foul Won) mutations=[M7_UNICODE_LENGTH_STRESS, M4_STRUCTURAL_CORRUPTION, M3_NULL_EMPTY] file=fuzz_20260701_191109_13.csv corpusSize=249
+[2026-07-01 19:11:29.651] [INFO] [FuzzEngine] iter=14 seed=156(Clearance) mutations=[M7_UNICODE_LENGTH_STRESS, M4_STRUCTURAL_CORRUPTION, M6_ENUM_INVALIDATION] file=fuzz_20260701_191109_14.csv corpusSize=249
+[2026-07-01 19:11:30.980] [INFO] [FuzzEngine] iter=15 seed=60(Pressure) mutations=[M2_BOUNDARY_VALUE, M4_STRUCTURAL_CORRUPTION, M1_TYPE_COERCION] file=fuzz_20260701_191109_15.csv corpusSize=249
+[2026-07-01 19:11:32.350] [INFO] [FuzzEngine] iter=16 seed=164(Interception) mutations=[M1_TYPE_COERCION] file=fuzz_20260701_191109_16.csv corpusSize=249
+[2026-07-01 19:11:33.696] [INFO] [FuzzEngine] iter=17 seed=186(Dispossessed) mutations=[M7_UNICODE_LENGTH_STRESS, M5_INJECTION_PAYLOAD] file=fuzz_20260701_191109_17.csv corpusSize=249
+[2026-07-01 19:11:35.034] [INFO] [FuzzEngine] iter=18 seed=120(Foul Won) mutations=[M7_UNICODE_LENGTH_STRESS] file=fuzz_20260701_191109_18.csv corpusSize=249
+[2026-07-01 19:11:36.395] [INFO] [FuzzEngine] iter=19 seed=243(Shot) mutations=[M6_ENUM_INVALIDATION, M5_INJECTION_PAYLOAD] file=fuzz_20260701_191109_19.csv corpusSize=249
+[2026-07-01 19:11:37.737] [INFO] [FuzzEngine] iter=20 seed=65(Pressure) mutations=[M7_UNICODE_LENGTH_STRESS, M2_BOUNDARY_VALUE] file=fuzz_20260701_191109_20.csv corpusSize=249
+[2026-07-01 19:11:39.158] [INFO] [FuzzEngine] iter=21 seed=48(Carry) mutations=[M5_INJECTION_PAYLOAD] file=fuzz_20260701_191109_21.csv corpusSize=249
+[2026-07-01 19:11:40.487] [INFO] [FuzzEngine] iter=22 seed=146(Clearance) mutations=[M5_INJECTION_PAYLOAD] file=fuzz_20260701_191109_22.csv corpusSize=249
+[2026-07-01 19:11:41.824] [INFO] [FuzzEngine] iter=23 seed=123(Foul Won) mutations=[M6_ENUM_INVALIDATION] file=fuzz_20260701_191109_23.csv corpusSize=249
+[2026-07-01 19:11:43.149] [INFO] [FuzzEngine] iter=24 seed=56(Pressure) mutations=[M1_TYPE_COERCION] file=fuzz_20260701_191109_24.csv corpusSize=249
+[2026-07-01 19:11:44.482] [INFO] [FuzzEngine] iter=25 seed=78(Ball Recovery) mutations=[M6_ENUM_INVALIDATION, M2_BOUNDARY_VALUE, M1_TYPE_COERCION] file=fuzz_20260701_191109_25.csv corpusSize=249
+[2026-07-01 19:11:45.834] [INFO] [FuzzEngine] iter=26 seed=40(Carry) mutations=[M6_ENUM_INVALIDATION, M6_ENUM_INVALIDATION, M5_INJECTION_PAYLOAD] file=fuzz_20260701_191109_26.csv corpusSize=249
+[2026-07-01 19:11:47.158] [INFO] [FuzzEngine] iter=27 seed=175(Dispossessed) mutations=[M5_INJECTION_PAYLOAD, M2_BOUNDARY_VALUE] file=fuzz_20260701_191109_27.csv corpusSize=249
+[2026-07-01 19:11:48.470] [INFO] [FuzzEngine] Fuzzing loop stopped. Total iterations=27, pass=27, fail=0, crashes=0
+[2026-07-01 19:11:49.184] [INFO] [SeedWatcher] Stopped. Total files ingested as seeds: 0

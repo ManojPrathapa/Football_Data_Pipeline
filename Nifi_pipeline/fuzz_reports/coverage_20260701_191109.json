@@ -1,0 +1,13 @@
+{
+  "runId": "20260701_191109",
+  "generatedAt": "2026-07-01T19:11:48.4714757",
+  "iterations": 27,
+  "pass": 27,
+  "fail": 0,
+  "crashes": 0,
+  "corpusSize": 249,
+  "coveragePercent": 7.69,
+  "processorsHit": 1,
+  "processorsTotal": 13,
+  "uncoveredProcessors": ["PutDatabaseRecord", "MergeContent", "GetFile", "EvaluateJsonPath", "MergeContent", "SplitJson", "RouteOnAttribute", "JoltTransformJSON (Pass)", "MergeContent", "UpdateAttribute", "JoltTransformJSON (Shot)", "JoltTransformJSON (Dribble)"]
+}
